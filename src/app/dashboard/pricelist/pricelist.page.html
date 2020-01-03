@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item >
+      <ion-avatar slot="start">
+        <ion-img [src]="back" (click)="goBack()"></ion-img>
+      </ion-avatar>
+      <ion-img [src]="companytitle"></ion-img>
+    </ion-item>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content>
+  <p class="ion-margin"><b>Price List</b></p>
+  <ion-card>
+    <ion-card-content (click)="gotocwproducts()"> <b>All Products</b> 
+      <ion-icon float-right name="ios-arrow-forward">
+    </ion-icon></ion-card-content>
+    
+  </ion-card>
+  <ion-card>
+    <ion-card-content (click)="gotoproducts('vehiclecompany')"> <b>Vehicle Make </b>
+      <ion-icon float-right name="ios-arrow-forward">
+    </ion-icon></ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content> <b>Air Treatment</b> 
+      <ion-icon float-right name="ios-arrow-forward"></ion-icon>
+  </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content> <b>Control Valves</b>
+      <ion-icon float-right name="ios-arrow-forward"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

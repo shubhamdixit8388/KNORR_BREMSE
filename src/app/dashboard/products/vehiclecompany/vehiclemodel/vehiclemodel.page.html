@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-img [src]="back" (click)="goBack()"></ion-img>
+      </ion-avatar>
+      <ion-img [src]="companytitle"></ion-img>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-toolbar>
+      <ion-title><b>{{this.company}} Motors</b></ion-title>
+    </ion-toolbar>
+  </ion-list>
+  <ion-segment [(ngModel)]="duty">
+    <ion-segment-button value="light" (click)="gotoFilter('light')">
+      <ion-label>Light Duty</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="medium" (click)="gotoFilter('medium')">
+      <ion-label>Medium Duty</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="heavy" (click)="gotoFilter('heavy')">
+      <ion-label>Heavy Duty</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-grid>
+    <ion-row>
+      <ion-col size=6 *ngFor="let model of models" [routerLink]="['./msproducts',model.name]">
+        <ion-card>
+          <img src={{model.imgurl}}><p><b>{{model.name}}</b></p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

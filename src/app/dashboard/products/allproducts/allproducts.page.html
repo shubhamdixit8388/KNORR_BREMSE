@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item >
+      <ion-avatar slot="start">
+        <ion-img [src]="back" (click)="goBack()"></ion-img>
+      </ion-avatar>
+      <ion-img [src]="companytitle"></ion-img>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-toolbar>
+      <ion-title>All Products</ion-title>
+    </ion-toolbar>
+    <ion-item *ngFor="let product of products" [routerLink]="['./', product.product_id]">
+      <div>
+        <ion-grid>
+          <ion-row> 
+            <ion-label>Product Name: <b>{{product.name}}</b></ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-label>KB Part Number: <b>{{product.kb}}</b></ion-label>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

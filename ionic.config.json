@@ -1,5 +1,7 @@
 {
   "name": "KNORR_svd_ionic2",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

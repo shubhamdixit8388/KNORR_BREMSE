@@ -1,0 +1,99 @@
+img{
+    width: 100%;
+    height: fit-content;
+}
+ion-title
+{
+    text-align: center;
+}
+ion-searchbar
+{
+    padding: 15px;
+    border-radius: 15px;
+}
+ion-content
+{
+    --background: rgb(241, 240, 240);
+}
+p{
+    padding-left: 15px;
+    font-size: 22px;
+    
+ 
+}
+ion-card
+{
+    padding-top: 10px;
+    height: 80px;
+    width: 105px;
+    --background:white;
+    font: left;
+    text-align: center  ;
+    border-radius: 10px;
+}
+ion-grid
+{
+    
+    padding: 0px;
+}
+#news-card
+{
+    height: 300px;
+    width: 90%;
+    padding: 10px;
+    margin-left: 15px;
+}
+#fav-pro-card
+{
+    height: 250px;
+    width: 200px;
+    margin-left: 15px;
+    img{
+        height: 150px;
+        width: 150px;
+        margin-left: 24px;
+        margin-top: 15px;
+    }
+    h6
+    {
+        margin-left: 10px;
+        color: black;
+    }
+}
+ion-card
+{
+    height: 100px;
+    width: 100px;
+    p
+    {
+        font-size: 14px;
+    }
+}
+.over1{
+    //position: relative;
+    //margin-bottom: -10px;
+    //z-index: -1;
+}
+.adjust1{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.adjust2{
+    //z-index: -1;
+    margin: 10px 10px 10px 10px;
+    ion-card{
+        width: 100%;
+        height: fit-content;
+        padding-top: 10px;
+        padding-bottom: 10px; 
+        margin: 0px; 
+        border-radius: 0px;
+        
+    }
+    
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    
+}

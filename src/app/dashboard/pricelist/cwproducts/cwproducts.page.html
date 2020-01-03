@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item >
+      <ion-avatar slot="start">
+        <ion-img [src]="dbservice.back" (click)="goBack()"></ion-img>
+      </ion-avatar>
+      <ion-img [src]="dbservice.companytitle"></ion-img>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p class="ion-margin"><b>All Products</b></p>
+  
+<app-accordion *ngFor="let product of products" [title]="product.extra1"></app-accordion>
+  
+</ion-content>
+ 

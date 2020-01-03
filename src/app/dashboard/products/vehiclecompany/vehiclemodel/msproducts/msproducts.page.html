@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-img [src]="back" (click)="goBack()"></ion-img>
+      </ion-avatar>
+      <ion-img [src]="companytitle"></ion-img>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  <ion-list>
+    <ion-toolbar>
+      <ion-title>{{ model_name }}</ion-title>
+    </ion-toolbar>
+    <div *ngIf="check">
+      <ion-item *ngFor="let product of products">
+        <div>
+          <ion-grid>  
+            <ion-row>
+              <p><b>{{product.name}}</b></p><p>{{product.price}}</p>
+            </ion-row>
+            <ion-row>
+              <ion-label>KB Part Number: <b>{{product.kb}}</b></ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label>AM Part Number: <b>{{product.am}}</b></ion-label>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </ion-item>
+    </div>
+    <div *ngIf="check2">
+      <ion-item *ngFor="let product of products" [routerLink]="['./productdetails', product.model_id]">
+        <div>
+          <ion-grid>  
+            <ion-row>
+              <ion-label>Product Name: <b>{{product.name}}</b></ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label>KB Part Number: <b>{{product.kb}}</b></ion-label>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </ion-item>
+    </div>
+    
+    
+  </ion-list>
+</ion-content>
+ 

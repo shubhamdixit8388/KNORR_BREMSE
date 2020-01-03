@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-img [src]="back" (click)="goBack()"></ion-img>
+      </ion-avatar>
+      <ion-img [src]="companytitle"></ion-img>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  <ion-list>
+    <ion-toolbar>
+      <ion-title>Vehicle Make</ion-title>
+    </ion-toolbar>
+  </ion-list>
+   
+  <ion-grid>
+    <ion-row  *ngFor="let company of companies" [routerLink]="['./vehiclemodel',company.name]">
+      
+      <ion-col size-md=6 >
+        <ion-item >
+          <ion-card> 
+            <img src={{company.imgurl}}>
+          </ion-card>
+        </ion-item>
+        
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+</ion-content> 

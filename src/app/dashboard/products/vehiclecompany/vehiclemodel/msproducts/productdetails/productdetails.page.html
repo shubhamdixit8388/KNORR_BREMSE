@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item >
+      <ion-avatar slot="start">
+        <ion-img [src]="back" (click)="goBack()"></ion-img>
+      </ion-avatar>
+      <ion-img [src]="companytitle"></ion-img>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngFor="let p of products"> 
+  <ion-grid margin>
+    <ion-row>
+      <ion-col no-padding>
+        <ion-img [src]="pdimg"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h4>{{p.name}}</h4>
+        <h3 >${{p.price}}</h3>
+        <ion-grid>
+          <ion-row>
+            <ion-label>KB Part Number: <b>{{p.kb}}</b></ion-label>
+          </ion-row>
+        </ion-grid>
+        <ion-grid>
+          <ion-row>
+            <ion-label>AM Part Number: <b>{{p.am}}</b></ion-label>
+          </ion-row>
+        </ion-grid>
+        <ion-grid>
+          <ion-row>
+            <ion-label>OEM Part Number: <b>{{p.oem}}</b></ion-label>
+          </ion-row>
+        </ion-grid>
+        <ion-grid> 
+          <ion-row>
+            <ion-label>OEM Part Number: <b>{{p.oem}}</b></ion-label>
+          </ion-row>
+        </ion-grid>
+        <ion-grid >
+          <ion-row>
+              <ion-label style="font-size: 20px;">RFRONT(FR)&REAR(RR):</ion-label>
+          </ion-row>
+        </ion-grid > 
+        <ion-grid>
+          <ion-row  no-padding>
+            <ion-label style="font-size: 20px; color:#999999;">{{p.front_rear}}</ion-label>
+          </ion-row>
+        </ion-grid>
+        <ion-grid >
+          <ion-row>
+              <ion-label style="font-size: 20px;">Functions:</ion-label>
+              <ion-label style="font-size: 18px; color:#999999;">{{p.fun}}</ion-label>
+          </ion-row>
+        </ion-grid >
+        <ion-grid >
+          <ion-row>
+              <ion-label style="font-size: 20px;">Features:</ion-label>
+              <ion-label style="font-size: 18px; color:#999999;" onload="breakfeature()">{{p.feature}}</ion-label>
+          </ion-row>
+        </ion-grid >
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-card>
+        <ion-item href="/dashboard" class="activated">
+          <ion-icon name="ios-arrow-forward" slot="end"></ion-icon>
+          <ion-label>Repain Kits</ion-label>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+</ion-content>
